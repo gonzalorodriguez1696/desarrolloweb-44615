@@ -1,0 +1,34 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+ul {
+    list-style: none;
+    font-size: 0
+        /* truco por el uso de inline-block*/
+}
+
+li {
+    display: inline-block;
+    width: 25%;
+    position: relative;
+    font-size: 14px
+}
+
+ul ul {
+    position: absolute;
+    display: none;
+}
+
+ul ul li {
+    display: block;
+}
+
+ul li:hover ul {
+    display: block;
+}
+

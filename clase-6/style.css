@@ -1,0 +1,152 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.padre{
+    display: grid;
+    grid-template-areas:"encabezado    encabezado"
+                        "seccion        publicidad"
+                        "pie            pie";
+    grid-template-columns:5fr 1fr ;
+    grid-template-rows: 1fr 10fr 1fr;
+}
+
+header{
+    background-color: crimson;
+    grid-area: encabezado;
+}
+
+header nav{
+    display:flex;
+    height: 100%;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+nav ul li a{
+    
+    background-color: pink;
+    margin: 20px;
+    padding: 5%;
+    border-radius: 5px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    background-color: pink;
+    grid-area: seccion;
+}
+
+aside{
+    background-color: orange;
+    grid-area: publicidad;
+}
+
+footer{
+    background-color: blue;
+    grid-area: pie;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.galeria img{
+    width: 30%;
+}
+
+
+/*min-width: 320px 720px 1024px*/
+
+/*max-width: 400px 720px 1024px*/
+
+
+@media screen and (max-width: 1024px) {
+    .padre{
+        /*display:grid;*/
+        grid-template-areas:"encabezado"
+                            "seccion"
+                            "pie";
+        grid-template-columns:1fr ;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+    
+    aside{
+        display:none;
+    }
+
+    .galeria img{
+        width: 46%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    
+    /*
+    .padre{
+        
+        grid-template-areas:"encabezado"
+                            "seccion"
+                            "pie";
+        grid-template-columns:1fr ;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+    */
+    
+    aside{
+        display:none;
+    }
+
+    .galeria img{
+        width: 46%;
+        margin: 1%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+
+
+    .padre{
+        /*display:grid;*/
+        grid-template-areas:"encabezado"
+                            "seccion"
+                            "pie";
+        grid-template-columns:1fr ;
+        grid-template-rows: 1fr 10fr 1fr;
+    }
+
+    .galeria img{
+        width: 100%;
+        margin: 0;
+    }
+
+    header nav ul{
+        flex-direction: column;
+        width: 100%;
+        
+        justify-content: space-evenly;
+    }
+}
+
+
+

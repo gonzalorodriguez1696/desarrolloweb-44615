@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+/* Comentario:
+Una clase se crea con el operador .
+por ejemplo:
+*/
+.claseColorRojo{
+    color:red;
+}
+
+.centrar-texto{
+    text-align: center;
+    font-weight: bold;
+}
